@@ -1,26 +1,23 @@
 # Stage 1: Build the Angular application
-FROM node:18.13 as build
+FROM node:18.13-alpine as build
 
 WORKDIR /app
 
 # Install dependencies
 COPY package.json package-lock.json ./
-RUN npm install
+RUN npm ci 
 
 # Copy the rest of the application code
 COPY . .
 
 # Build the application
-RUN npm run build --prod
+RUN npm run build
 
 # Stage 2: Serve the application using Nginx
 FROM nginx:alpine
 
 # Copy the built files from the previous stage
-COPY dist/angular-conduit /usr/share/nginx/html
-
-# Copy custom Nginx configuration if needed
-# COPY nginx.conf /etc/nginx/nginx.conf
+COPY --from=build /app/dist/angular-conduit /usr/share/nginx/html
 
 # Expose port 80
 EXPOSE 80
