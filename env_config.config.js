@@ -1,4 +1,7 @@
 const webpack = require("webpack");
+require("dotenv").config({ path: "../.env" });
+
+console.log("Loaded API_URL:", process.env.API_URL); // <-- Debugging-Log
 
 module.exports = {
   plugins: [
