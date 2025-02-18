@@ -10,6 +10,9 @@ ARG CONFIGURATION=production
 COPY package.json package-lock.json ./
 RUN npm ci
 
+# Install @angular-builders/custom-webpack (falls noch nicht in package.json)
+RUN npm install --save-dev @angular-builders/custom-webpack
+
 # Copy the rest of the application code
 COPY . .
 
