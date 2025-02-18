@@ -28,7 +28,8 @@
     "marked": "^11.1.0",
     "rxjs": "^7.4.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.14.2"
+    "zone.js": "~0.14.2",
+    "dotenv": "^16.0.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^19.0.0",

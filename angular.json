@@ -6,10 +6,10 @@
       "root": "",
       "architect": {
         "build": {
-          "builder": "@angular-builders/custom-webpack:browser-esbuild",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
             "customWebpackConfig": {
-              "path": "./env-config.config.js"
+              "path": "./env_config.config.js"
             },
             "outputPath": "dist/angular-conduit",
             "index": "src/index.html",
