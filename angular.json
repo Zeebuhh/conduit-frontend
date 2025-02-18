@@ -3,6 +3,7 @@
   "version": 1,
   "projects": {
     "angular-conduit": {
+      "root": "",
       "architect": {
         "build": {
           "builder": "@angular-builders/custom-webpack:browser-esbuild",
