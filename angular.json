@@ -1,4 +1,6 @@
 {
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
   "projects": {
     "angular-conduit": {
       "architect": {
@@ -6,7 +8,7 @@
           "builder": "@angular-builders/custom-webpack:browser-esbuild",
           "options": {
             "customWebpackConfig": {
-              "path": "./env_config.config.js"
+              "path": "./env-config.config.js"
             },
             "outputPath": "dist/angular-conduit",
             "index": "src/index.html",
